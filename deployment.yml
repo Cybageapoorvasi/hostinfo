@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostinfo
+  labels:
+    app: hostinfo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hostinfo
+  template:
+    metadata:
+      labels:
+        app: hostinfo
+    spec:
+      containers:
+      - name: hostinfo
+        image: sirasaoa/hostinfo:v1.0
+      
+ 
+        ports:
+        - containerPort: 9000
