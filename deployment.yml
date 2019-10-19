@@ -20,4 +20,4 @@ spec:
       
  
         ports:
-        - containerPort: 9000
+        - containerPort: 9001
